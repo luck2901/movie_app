@@ -2,15 +2,20 @@ import React from "react";
 
 class Detail extends React.Component{
     componentDidMount(){
-        const{location, histoty} = this.props;
+        const{location, history} = this.props;
         if(location.state ===undefined){
-            history.pushState("/");
+            history.push("/");
         }
     }
     render(){
         const{location} = this.props;
         if(location.state){
-            return <span>{location.state.title}</span>;
+            return( 
+            <div>
+                <div>{location.state.title}</div>
+                <div>{location.state.year}</div>
+            </div>
+            );
         }
         else{
             return null;

@@ -39,7 +39,8 @@ class Home extends React.Component{
           poster={movie.medium_cover_image}
           genres = {movie.genres} />
         ))}
-        </div>}</section>
+        </div>}
+        </section>
      )
   }
 }
